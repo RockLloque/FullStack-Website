@@ -41,7 +41,7 @@ db.once("open", () => {
 });
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
 
 const secret = process.env.SECRET || "secretKey";
 const store = new MongoStore({
